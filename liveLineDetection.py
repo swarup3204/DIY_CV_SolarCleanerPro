@@ -5,7 +5,9 @@ vid = cv2.VideoCapture(0)
 
 while(True):
     ret, frame = vid.read()
-    cv2.imshow('frame', getLinedImg(frame))
+    lineFrame, close_edge = getLinedImg(frame)
+    cv2.imshow('frame', lineFrame)
+    print(close_edge)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
