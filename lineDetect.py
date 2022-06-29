@@ -14,7 +14,6 @@ def getLinedImg(img):
                 if(len(lst)>=2):
                     break
                 r,theta = r_theta
-                # print(theta)
                 if theta > 1.4 and theta < 1.8: 
                     a = np.cos(theta)
                     b = np.sin(theta)
@@ -26,7 +25,6 @@ def getLinedImg(img):
                     y2 = int(y0 - line_length*(a))
                     cv2.line(img,(x1,y1), (x1,y2), (0,0,255),2)
                     lst.append(y1)
-        print(lst)        
     except:
         pass
     return img
