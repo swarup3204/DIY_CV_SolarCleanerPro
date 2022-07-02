@@ -2,14 +2,14 @@ from lineDetect import getLinedImg
 import cv2
 
 if __name__ == "__main__":
-    
+
     vid = cv2.VideoCapture(0)
 
     NO_EGDE_FOUND = "NO_EGDE_FOUND"
     NOT_CLOSE = "NOT_CLOSE"
     CLOSE = "CLOSE"
 
-    while(True):
+    while True:
         ret, frame = vid.read()
         lineFrame, close_edge = getLinedImg(frame)
         cv2.imshow('frame', lineFrame)
